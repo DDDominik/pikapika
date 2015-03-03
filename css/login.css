@@ -1,0 +1,154 @@
+body{
+	margin: 0;
+	padding: 0;
+	font:12px Arial, 宋体;
+	min-width:1360px;
+}
+a{
+	text-decoration: none;
+	color:rgb(69,72,77);
+}
+input,button,select,textarea{
+	outline:none;
+}
+.header{
+	width: 100%;
+	height: 40px;
+	background-color: rgb(241,241,241);
+}
+.he_cen{
+	width:960px;
+	margin: 0 auto;
+
+}
+.zhuzhan{
+	width: 60px;
+	text-align: center;
+	float: left;
+}
+.zhuce{
+	width: 60px;
+	text-align: center;
+	position: relative;
+	float: right;
+}
+.he_cen a{
+	text-decoration: none;
+	position: relative;
+	top: 10px;
+	font-size: 14px;
+}
+a:hover{
+	color:rgb(243,92,143);
+	font-weight: bold;
+}
+.top{
+	width: 100%;
+	height: 127px;
+}
+.logo{
+	width:100%;
+	margin: 0 auto;
+}
+.logo img{
+	width: 100%;
+	height: 127px;
+	max-width:100%;
+	max-height: 127px;
+}
+.nav{
+	width: 100%;
+	height: 40px;
+}
+.container{
+	width: 100%;
+}
+.content{
+	margin: 0 auto;
+	width: 960px;
+}
+.leftside{
+	float: left;
+	width: 530px;
+	height: 320px;
+	border-style: solid;
+	border-right-color: #ccc;
+	border-top-color: white;
+	border-left-color: white;
+	border-bottom-color: white;
+}
+.rightside{
+	float: right;
+	width: 418px;
+	height: 400px;
+	position: relative;
+	left: 90px;
+	top: 70px;
+}
+
+#password{
+	width:200px;
+	height:30px;
+}
+#name{
+	width:200px;
+	height:30px;
+}
+.submit{
+	position: relative;
+	left:217px;
+	
+}
+
+.nav{
+	width:100%;
+	height:40px;
+}
+.box{
+	width:400px;
+	height:300px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #ccc;
+	background-repeat: no-repeat;
+	background-image:url(../pic/register.png) ;
+	background-size:400px , 300px ;
+}
+.top_box{
+    width:350px;
+	height:100px;
+	position: relative;;
+	left:30px;
+	top:70px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.bottom_box{
+	width:50px;
+	height:30px;
+	background-color: #00a0d8;
+	border-radius: 5px;
+	position: relative;;
+	left:250px;
+	top:90px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.bottom_box a{
+	text-decoration: none;/*去除下划线*/
+	position: relative;
+	top: 3px;
+	color: white;
+}
+
+.button{
+	border-radius: 5px ;
+	width:40px;
+	height:30px;
+	cursor: pointer ;
+	font-weight: bold ;
+	background-color: #00a0d8 ;
+	border: 0px ;
+	color: white ;
+}

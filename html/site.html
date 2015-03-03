@@ -1,0 +1,124 @@
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>账号安全</title>
+  <link rel="stylesheet" type="text/css" href="../css/site.css">
+  <link rel="stylesheet" type="text/css" href="../icon/iconfont.css">
+  <link rel="shortcut icon" href="../icon/poke.ico">
+  <script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="../js/site.js"></script>
+  </head>
+  <body>
+    <div class="top">
+      <div class="top_top">
+        <div class="top_left">
+          <span class="zhuzhan">
+            <a href="../index.html"></br>主站</a>
+          </span>
+        </div>
+        <div class="top_right">
+          <div class="touxiang">
+            <div class="touxiang_pic">
+              <a href="center.html"><img src="../pic/head.png" class="pic"></a>
+            </div>
+            <div class="tuichu"><a href="../handle/logout.php"></br>退出</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="top_down">
+        <div class="logo">
+          <img src="../pic/pikapika.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="nav"></div>
+      <div class="left_container">
+        <div class="one">
+          <div class="big">
+            <img src="../pic/head.png" class="pic" >
+          </div>
+          <p class="username"></p>
+        </div>
+        <div class="two">
+          <div class="shape" id="now_page">
+              <a></br><i class="iconfont">&#xe643;</i> 账号安全</a>
+          </div>
+          <div class="shape">
+            <a href="setting.html"></br><i class="iconfont">&#xe629;</i> 我的信息</a>
+          </div>
+          <div class="shape">
+            <a href="face.html"></br><i class="iconfont">&#xe616;</i> 头像设置</a>
+          </div>
+          <div class="shape blank"></div>
+          <div class="shape blank"></div>
+          <div class="shape blank"></div>
+          <div class="shape blank"></div>
+          <div class="shape blank"></div>
+        </div>
+      </div>
+      <div class="right_container">
+        <div class="right_top">
+            <span id="anquan">账号安全</span>
+        </div>
+        <div class="right_down">
+          <div class="item">
+            </br>
+            <p class="list">
+              <span>邮箱：</span>
+              <span class="myemail info"></span>
+              <a id="set_e">设置邮箱</a>
+            </p>
+            <div id="set_email" style="display:none">
+              <form action="../handle/setEmail.php" method="post">
+                <div>
+                  <input type="text" name="email" placeholder="请填写您的邮箱" id="email" class="">
+                  <input type="submit" value="保存" class="button" id="eml_sbm">
+                  <br><span class="warning" id="eml_w">邮箱格式错误</span>    
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="item">
+            </br>
+            <p class="list">
+              <span>手机：</span>
+              <span class="mytel info"></span>
+              <a id="set_t">设置手机</a>
+            </p>
+            <div id="set_tel" style="display:none">
+              <form action="../handle/setTelnum.php" method="post">
+                <div>
+                  <input type="text" name="telnum" placeholder="请填写您的手机号" id="tel">
+                  <input type="submit" value="保存" class="button" id="tel_sbm">
+                  <br><span class="warning" id="tel_w">手机格式错误</span>         
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="item">
+            </br>
+            <p class="list">
+              <span>密码：</span>
+              <span class="info">*******</span>
+              <a id="change">修改密码</a>
+            </p>
+            <div id="change_psw" style="display:none">
+              <form action="../handle/changePassword.php" method="post">
+                <div>
+                  <input type="password" name="prevpsw" placeholder="当前密码" class="input">
+                  <input type="submit" value="确认" class="button" hidden="true" id="submitpsw"><br/>   
+                  <input type="password" name="psw" placeholder="新的密码" id="psw" class="input">
+                  <span id="pswCheck"></span><br/>
+                  <input type="password" placeholder="再次确定" id="cpsw" class="input">
+                  <span id="cpswCheck"></span><br/>                      
+                </div>
+              </form>
+            </div>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

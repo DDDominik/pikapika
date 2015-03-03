@@ -1,0 +1,99 @@
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>头像设置</title>
+  <link rel="stylesheet" type="text/css" href="../css/face.css">
+  <link rel="stylesheet" type="text/css" href="../icon/iconfont.css">
+  <link rel="shortcut icon" href="../icon/poke.ico">
+  <link rel="stylesheet" href="../css/jquery.Jcrop.css" type="text/css" />
+  <script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="../js/face.js"></script>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.Jcrop.min.js"></script>
+  </head>
+  <body>
+    <div class="top">
+      <div class="top_top">
+        <div class="top_left">
+          <span class="zhuzhan">
+            <a href="../index.html"></br>主站</a>
+          </span>
+        </div>
+        <div class="top_right">
+          <div class="touxiang">
+            <div class="touxiang_pic">
+              <a href="center.html"><img src="../pic/head.png" class="pic"></a>
+            </div>
+            <div class="tuichu"><a href="../handle/logout.php"></br>退出</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="top_down">
+        <div class="logo">
+          <img src="../pic/pikapika.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="nav"></div>
+      <div class="left_container">
+        <div class="one">
+          <div class="big">
+            <img src="../pic/head.png" class="pic">
+          </div>
+          <p class="username"></p>
+        </div>
+        <div class="two">
+          <div class="shape">
+              <a href="site.html"></br><i class="iconfont">&#xe643;</i> 账号安全</a>
+          </div>
+          <div class="shape">
+            <a href="setting.html"></br><i class="iconfont">&#xe629;</i> 我的信息</a>
+          </div>
+          <div class="shape" id="now_page">
+            <a></br><i class="iconfont">&#xe616;</i> 头像设置</a>
+          </div>
+        </div>
+      </div>
+      <div class="right_container">
+        <div class="my_head">
+          <span>
+            我的头像
+          </span>
+        </div>
+        <div id="now">
+          <span>当前头像</span>
+          <br><br>
+          <img src="../pic/head.png" class="pic">
+        </div>
+        <div id="upload">
+          <form action="../handle/changeFace.php" method="post" enctype = "multipart/form-data">
+            <span>上传头像</span>
+            <br><br><br>
+            <input type="file" name="face" id="upface">
+            <br>
+            <input type="hidden" name="x" id="x">
+            <input type="hidden" name="y" id="y">
+            <input type="hidden" name="w" id="w">
+            <input type="hidden" name="h" id="h">
+            <input type="submit" value="上传" class="button" hidden="true">
+          </form>
+        </div>
+        <div id="preview" hidden="true">
+          <span>预览头像</span>
+          <br><br>
+          <div id="preview_container"><img src="../pic/head.png" id="upload_face"></div><br>
+          <div id="warning" hidden="true">
+            <br><span>请上传jpg,png,gif,</span>
+            <br><span>jpeg格式的图片!</span>
+          </div>
+        </div>
+        <div id="crop" hidden="true"> 
+          <span>头像裁剪</span>
+          <br>
+          <img id="crop_face">
+        </div>
+      </div>
+    </div>
+  </body
+</html>

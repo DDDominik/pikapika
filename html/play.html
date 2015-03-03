@@ -1,0 +1,163 @@
+<?php session_start(); ?>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>播放</title>
+	<link rel="stylesheet" type="text/css" href="../css/play.css">
+	<link rel="stylesheet" type="text/css" href="../icon/iconfont.css">
+	<link rel="shortcut icon" href="../icon/poke.ico">
+	<link rel="stylesheet" href="../icon/exicon/iconfont.css">
+	<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+  	<script type="text/javascript" src="../js/play.js"></script> 
+	</head>
+	<body>
+		<div class="top">
+			<div class="top_l"><a href="../index.html"><br><i class="iconfont">&#xe666;</i> 主站</a></div>
+			<div class="top_r">
+				<div class="login">
+					<ul class="aside_list">
+						<li class="t1"><a class="enroll" href="../html/login.html">登陆</a></li>
+						<li class="t1"><a class="register" href="../html/register.html">注册</a></li>
+						<li class="t2" id="small_face">
+							<a href="center.html" id="show"><img src="../pic/head.png" class="face"></a><br>
+							<div id="items">
+								<br><img class="level" src="../pic/poke.jpg"><span id="user"></span><br><br>
+								<div></div>
+								<br><a href="center.html">用户中心</a><br>
+								<br><a href="../handle/logout.php">退出登录</a><br>
+							</div>
+						</li>
+						<li class="t2"><a href="../html/collection.html"><i class="iconfont">&#xe601;</i> 收藏夹</a></li>
+						<li class="t2"><a href="../html/history.html"><i class="iconfont" style="font-size:16px">&#xe672;</i> 历史观看</a></li>
+						<li class="t2"><a href="../html/video_submit.html"><i class="iconfont">&#xf0024;</i> 投稿</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="logo">
+			<img src="../pic/pikapika.jpg" >
+		</div>
+		<div class="container">
+			<div class="banner">
+				<div class="ba_l">
+					<ul>
+						<li class="index"><a href="../index.html">首页</a></li>
+						<li><a href="../html/category.html?c=1">娱乐</a></li>
+						<li><a href="../html/category.html?c=2">动画</a></li>
+						<li><a href="../html/category.html?c=3">科技</a></li>
+						<li><a href="../html/category.html?c=4">其它</a></li>
+					</ul>
+				</div>
+				<div class="ba_r">
+					<input type="text" name="search" id="search">
+					<input type="submit" value="查找" id="search_button">
+				</div>
+			</div>
+			<div class="info">
+				<div class="video_info">
+					<div class="line">
+						<!-- <span id="tag">[萌物!]</span> -->
+						<span id="video_name">神棍德卖萌系列</span><br>
+					</div>
+					<div class="line">
+						<span id="category"></span>
+						<span id="time" title='上传时间'><i class="iconfont">&#x3435; </i></span>
+						<span id="click" title='点击'><i class="iconfont">&#xe633; </i></span>
+						<span id="collect" title='收藏'><i class="iconfont">&#xe601; </i></span>
+						<span id="mq" title="弹幕"><i class="iconfont">&#xe60b; </i></span>
+						<a id="collect_it"><i class="iconfont">&#xe601;</i>点我收藏</a>
+						<a id="say_great"><i class="iconfont">&#x343f;</i></a>	
+					</div>
+				</div>
+				<div class="uploader_info">
+					<img src="../pic/head.png" id="uploader_face">
+					<span id="uploader_name">MZ</span>
+					<span id="submit_amount" title='投稿数'><i class="iconfont">&#xe607; </i></span>
+				</div>
+			</div>
+			<div class="mid">
+				<div class="player">
+					<video id="video_view" width="860" height="580" controls="controls">
+						
+					</video>
+					<div class="danmu">
+						<input type="text" class="danmu_info" placeholder="在这里输入弹幕,不得超过30字哦">
+						<input type="submit" class="danmu_launch" value="发送弹幕">
+						<input type="hidden" class="user_level">
+					</div>
+					<div class="biubiubiu">
+	
+					</div>
+				</div>
+				<div class="description">
+					<div id="tip">视频简介:</div>
+					<div id="description"></div>
+				</div>
+				<div class="tags">
+					<div id="tag_con"><span id="tag">1234</span></div>
+					<!-- <input type="submit" value="增加tag" id="add_tag"> -->
+				</div>
+			</div>
+			<div class="comment">
+				<div class="add">
+					<span>评论</span>
+					<span id="comment_amount">0</span><br>			
+					<div>
+						<form action="../handle/addComment.php" method="post">
+							<img src="../pic/head.png" class="face">
+							<textarea name="comment" id="comment" cols="100" rows="5" placeholder="在这里输入评论"></textarea>
+							<br><input type="submit" value="发表评论" class="button">
+							<input type="hidden" id="video_id" name="v_id">
+						</form>
+					</div>
+				</div>
+				<div class="view">
+					<div class="page">
+						<!-- <span class="page_item">共3页</span>
+						<a class="page_item">首页</a>
+						<a class="page_item">上页</a>
+						<strong class="page_item">1</strong>
+						<a class="page_item">2</a>
+						<a class="page_item">3</a>
+						<a class="page_item">下页</a>
+						<a class="page_item">末页</a> -->
+					</div>
+					<ul class="comment_list">
+						<!-- <li id="">
+							<img src="../pic/head.png" class="face face_one">
+							<div class="l_title">
+								<span class="l_num">#1</span>
+								<span class="l_user">MZ</span>
+							</div>
+							<div class="l_content">
+								好萌啊！
+							</div>
+							<div class="l_info">
+								<span class="l_time">2015-02-21 7:00</span>
+								<a class="reply">回复</a>
+							</div>
+							<div class="reply_container">
+								<ul class="reply_list"> 
+									<li>
+										<img src="../pic/master.jpg" class="replier_face">
+										<span>MZ</span>
+										<span> : 呵呵呵呵呵呵</span>
+										<span class="reply_time"> 2015-2-27 0:35</span>
+									</li>
+								</ul>
+								<div class="join">
+									<a class="join_it">参与回复</a>
+								</div>
+								<div class="reply_send">
+									<img src="../pic/master.jpg" class="face face_two">
+									<textarea name="reply" class="reply_info" cols="60" rows="5" placeholder="在这里输入回复"></textarea>
+									<input type="submit" class="reply_button" value="回复">
+								</div>
+							</div>		
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<title>编辑信息</title>
+		<link rel="stylesheet" href="../css/edit.css" type="text/css">
+		<link rel="stylesheet" href="../icon/iconfont.css">
+		<link rel="shortcut icon" href="../icon/poke.ico">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+  		<script type="text/javascript" src="../js/edit.js"></script>  
+	</head>
+	<body>
+		<div class="top">
+			<div class="header">
+				<div class="main">
+					<div class="main_right">
+						<a href="../index.html">主站</a>	
+					</div>
+				</div>
+				<div class="banner">
+					<div class="left" >
+						<div class="collection">
+							<a href="collection.html">收藏夹</a>
+						</div>
+						<div class="history">
+							<a href="../html/history.html">历史</a>
+						</div>
+						<div class="send">
+							<a href="video_submit.html">投稿</a>
+						</div>
+					</div>
+					<div class="right">
+						<div class="head_pic">
+							<a href="center.html"><img class="pic face" src="../pic/head.png"></a>
+							<div id="menu">
+								<a href="site.html">资料</a><br/>
+								<a href="../handle/logout.php">退出</a><br/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="logo">
+			<img src="../pic/pikapika.jpg" >
+		</div>
+		<div class="nav"></div>
+		<div class="container">
+			<div class="down_left">
+				<!-- <div class="top_center"></br><strong>用户中心</strong></div> -->
+				<div class="zhuye">
+					</br>
+					<a href="center.html"><i class="iconfont" style="position:relative;top:-2px;">&#xe63a;</i> 主页</a>
+				</div>
+					<div class="shape">
+						</br>
+						<a id="control"><i class="iconfont">&#xf0024;</i> 投稿 / 管理</a>
+					</div>
+					<div class="shape son_shape">
+						</br>
+						<a href="video_submit.html"><i class="iconfont">&#xe607;</i> 视频投稿</a>
+					</div>
+					<div class="shape son_shape" id="now_page">
+						</br>
+						<a href="manage.html"><i class="iconfont">&#xe65b;</i> 视频管理</a>
+					</div>
+					<!-- <div class="shape son_shape">
+						</br>
+						<a>专题管理</a>
+					</div> -->
+					<div class="shape">
+						</br>
+						<a href="collection.html"><i class="iconfont">&#xe601;</i> 收藏夹</a>
+					</div>
+					<!--
+					<div class="shape">
+					</br>
+						<a  href="">好友</a>
+					</div>
+					-->
+					<div class="shape">
+						</br>
+						<a href="site.html" target="_blank"><i class="iconfont">&#xe629;</i> 帐号</a>
+					</div>
+			</div>
+			<div class="down_right">
+			<form action="../handle/editVideo.php" method="post" enctype="multipart/form-data">
+				<div class="right_mid">
+					<span class="one">编辑信息 - </span>
+					<a class="two" target="_blank"></a>
+				</div>
+				<div class="right_down">
+					<div class="item">
+						<div class="list" id="uplp">
+							<b id="cover">封面</b>					
+							<input type="file" id="picture" name="picture" class="input">
+							<div id="up"><span>上传封面</span></div>
+							<div id="preview" hidden="true">
+            					<span class="warn_msg">请上传jpg,png,gif,</span>
+            					<br><span class="warn_msg">jpeg格式的图片!</span>
+       						</div>
+						</div>
+					</div>
+					<div class="item">
+						<p class="list">
+							<b class="txt">标题</b>
+							<input type="text" name="name" id="name" class="input" placeholder="不超过20字" readonly="readonly"><a class="ed">编辑</a>
+							<span id="n_w"></span>
+						</p>	
+					</div>
+					<div class="item">
+						<p class="list">
+							<b id="desc">简介</b>
+							<textarea rows="3" cols="60" id="description" name="description" class="input" placeholder="不超过200字" readonly="readonly"></textarea><a class="ed">编辑</a>
+							<span id="d_w"></span>
+						</p>	
+					</div>
+					<div class="item">
+						<p class="list">
+							<b class="txt">标签</b>
+							<input type="text" name="tag" id="tag" class="input" placeholder="每个10字以内,必须用半角逗号','隔开" readonly="readonly"><a class="ed">编辑</a>
+							<span id="t_w"></span>
+						</p>	
+					</div>
+					<div class="item" id="sbm" style="display:none">
+						<input type="submit" class="button" value="保存">
+						<input type="hidden" name="id" id="vid">
+					</div>
+                    <!-- <div class="item">
+						<p class="list">
+							<b class="txt">投稿内容</b>
+							<input type="text" name="tag" id="tag" class="input" placeholder="我看不懂B站这里是什么个意思,你还把上面的给划掉了">
+						</p>	
+					</div> -->
+				</div>
+			</form>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</body>	                                                                 
+</html>
